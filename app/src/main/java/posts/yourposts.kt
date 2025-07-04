@@ -81,7 +81,37 @@ fun YourPostsScreen(navController: NavController) {
 
     Scaffold(
         containerColor = ButterYellow,
-        bottomBar = { BottomNavBar(navController = navController) }
+        bottomBar = { BottomNavBar(
+            navController = navController,
+            onHomeClick = {
+                navController.navigate(Routes.HOME) {
+                    popUpTo(navController.graph.startDestinationId) { saveState = true }
+                    launchSingleTop = true
+                    restoreState = true
+                }
+            },
+            onServiceClick = {
+                navController.navigate(Routes.CREATE_SERVICE) {
+                    popUpTo(navController.graph.startDestinationId) { saveState = true }
+                    launchSingleTop = true
+                    restoreState = true
+                }
+            },
+            onReportClick = {
+                navController.navigate(Routes.CREATE_REPORT) {
+                    popUpTo(navController.graph.startDestinationId) { saveState = true }
+                    launchSingleTop = true
+                    restoreState = true
+                }
+            },
+            onProfileClick = {
+                navController.navigate(Routes.PROFILE) {
+                    popUpTo(navController.graph.startDestinationId) { saveState = true }
+                    launchSingleTop = true
+                    restoreState = true
+                }
+            }
+        ) }
     ) { innerPadding ->
         Column(
             modifier = Modifier

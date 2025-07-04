@@ -29,6 +29,7 @@ import com.happybirthday.taacheck.ui.theme.ButterYellow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import screens.BottomNavBar
+import screens.Routes
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -96,7 +97,37 @@ fun YourServiceRequestsScreen(navController: NavController) {
     Scaffold(
         containerColor = ButterYellow,
         bottomBar = {
-            BottomNavBar(navController = navController)
+            BottomNavBar(
+                navController = navController,
+                onHomeClick = {
+                    navController.navigate(Routes.HOME) {
+                        popUpTo(navController.graph.startDestinationId) { saveState = true }
+                        launchSingleTop = true
+                        restoreState = true
+                    }
+                },
+                onServiceClick = {
+                    navController.navigate(Routes.CREATE_SERVICE) {
+                        popUpTo(navController.graph.startDestinationId) { saveState = true }
+                        launchSingleTop = true
+                        restoreState = true
+                    }
+                },
+                onReportClick = {
+                    navController.navigate(Routes.CREATE_REPORT) {
+                        popUpTo(navController.graph.startDestinationId) { saveState = true }
+                        launchSingleTop = true
+                        restoreState = true
+                    }
+                },
+                onProfileClick = {
+                    navController.navigate(Routes.PROFILE) {
+                        popUpTo(navController.graph.startDestinationId) { saveState = true }
+                        launchSingleTop = true
+                        restoreState = true
+                    }
+                }
+            )
         }
     ) { innerPadding ->
         Column(

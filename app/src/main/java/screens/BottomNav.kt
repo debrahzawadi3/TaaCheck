@@ -80,14 +80,15 @@ fun BottomNavBar(
                             }
                         }
 
-                        BottomNavItem.Profile -> {
+                        is BottomNavItem.Profile -> {
                             onProfileClick?.invoke() ?: run {
                                 if (!isSelected) {
-                                    navController.navigate(Routes.PROFILE) {
-                                        popUpTo(Routes.PROFILE) {
-                                            inclusive = true
+                                    navController.navigate(item.route) {
+                                        popUpTo(navController.graph.startDestinationId) {
+                                            saveState = true
                                         }
                                         launchSingleTop = true
+                                        restoreState = true
                                     }
                                 }
                             }
@@ -105,4 +106,3 @@ fun BottomNavBar(
         }
     }
 }
-

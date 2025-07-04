@@ -18,6 +18,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.happybirthday.taacheck.ui.theme.BluePrimary
 import com.happybirthday.taacheck.ui.theme.ButterYellow
 import screens.BottomNavBar
+import screens.Routes
 
 @Composable
 fun RequestProviderScreen(
@@ -44,9 +45,31 @@ fun RequestProviderScreen(
             BottomNavBar(
                 navController = navController,
                 onHomeClick = {
-                    navController.navigate("home") {
-                        popUpTo("home") { inclusive = true }
+                    navController.navigate(Routes.HOME) {
+                        popUpTo(navController.graph.startDestinationId) { saveState = true }
                         launchSingleTop = true
+                        restoreState = true
+                    }
+                },
+                onServiceClick = {
+                    navController.navigate(Routes.CREATE_SERVICE) {
+                        popUpTo(navController.graph.startDestinationId) { saveState = true }
+                        launchSingleTop = true
+                        restoreState = true
+                    }
+                },
+                onReportClick = {
+                    navController.navigate(Routes.CREATE_REPORT) {
+                        popUpTo(navController.graph.startDestinationId) { saveState = true }
+                        launchSingleTop = true
+                        restoreState = true
+                    }
+                },
+                onProfileClick = {
+                    navController.navigate(Routes.PROFILE) {
+                        popUpTo(navController.graph.startDestinationId) { saveState = true }
+                        launchSingleTop = true
+                        restoreState = true
                     }
                 }
             )
