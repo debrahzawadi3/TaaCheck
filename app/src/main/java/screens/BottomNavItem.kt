@@ -10,7 +10,7 @@ sealed class BottomNavItem(
     val icon: ImageVector
 ) {
     object Home : BottomNavItem(Routes.HOME, "Home", Icons.Default.Home)
-    object Service : BottomNavItem(Routes.createService(), "Service", Icons.Default.Build)
-    object Report : BottomNavItem(Routes.createReport(), "Report", Icons.Default.Info)
+    object Service : BottomNavItem(Routes.CREATE_SERVICE, "Service", Icons.Default.Build)
+    object Report : BottomNavItem(Routes.CREATE_REPORT, "Report", Icons.Default.Info)
     object Profile : BottomNavItem(Routes.PROFILE, "Profile", Icons.Default.Person)
 }

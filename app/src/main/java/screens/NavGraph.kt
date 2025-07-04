@@ -183,6 +183,8 @@ object Routes {
     const val ACCEPT_SERVICE = "acceptService/{uid}"
     const val YOUR_POSTS = "yourPosts"
     const val YOUR_SERVICE_REQUESTS = "yourServiceRequests"
+    const val CREATE_SERVICE = "create_service"
+    const val CREATE_REPORT = "create_report"
 
     fun acceptService(uid: String) = "acceptService/$uid"
     fun requestInfo(requestId: String) = "requestInfo/$requestId"
