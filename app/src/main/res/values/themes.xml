@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.TaaCheck" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="SplashTheme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/pale_yellow</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/taachecklg</item>
+        <item name="postSplashScreenTheme">@style/Theme.TaaCheck</item>
+        <item name="windowSplashScreenAnimationDuration">2500</item>
+    </style>
+
+</resources>

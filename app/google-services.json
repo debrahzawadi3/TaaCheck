@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "844507150895",
+    "firebase_url": "https://taacheck-93bf5-default-rtdb.firebaseio.com",
+    "project_id": "taacheck-93bf5",
+    "storage_bucket": "taacheck-93bf5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844507150895:android:06064e70378db4a18ce4da",
+        "android_client_info": {
+          "package_name": "com.happybirthday.taacheck"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwrjhn5ljQKbNmCgDlfeA8c3v6b2crTKM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
